@@ -1,0 +1,149 @@
+html, body {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif; }
+
+.container {
+  background-color: #ffffff;
+  padding: 2rem 0;
+  width: 8.5in; }
+  .container > header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+
+.mugshot {
+  background-image: url("/headshot.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 1rem 0 0 2rem;
+  height: 100px;
+  width: 100px; }
+
+.jumbo {
+  color: #ffffff;
+  background-color: #469099;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  margin-bottom: 1rem;
+  padding: 0.1rem 1rem;
+  width: 80%; }
+  .jumbo h1 {
+    margin-bottom: 0; }
+  .jumbo h2 {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin: 0; }
+  .jumbo hr {
+    border-top: 1px solid #ffffff;
+    width: 40%;
+    margin-right: 75%; }
+  .jumbo p {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem; }
+
+ul.contact {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 1rem;
+  margin-left: 25%; }
+  ul.contact li {
+    font-size: smaller;
+    margin-right: 2rem; }
+    ul.contact li i {
+      color: #469099;
+      padding-right: 0.3rem; }
+
+main {
+  margin: 1rem; }
+
+article {
+  margin-top: 2rem; }
+  article section {
+    margin-top: 1rem; }
+  article header {
+    margin-bottom: 1rem; }
+  article h1 {
+    border-bottom: 1px solid #469099;
+    color: #469099;
+    font-size: 1.7rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase; }
+  article h2 {
+    color: #469099;
+    font-size: 1.3rem;
+    margin-bottom: 0; }
+  article h3 {
+    margin-bottom: 0;
+    font-weight: 400; }
+  article ul.bubbles {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 0; }
+    article ul.bubbles li {
+      background-color: #469099;
+      border-radius: 4px;
+      color: #ffffff;
+      font-size: small;
+      padding: 0.1rem 1rem;
+      margin: 0 0.7rem 0.7rem 0; }
+  article .business-desc {
+    color: #555555;
+    font-size: smaller;
+    font-style: italic; }
+  article .date-location {
+    color: #469099;
+    font-size: smaller;
+    margin-bottom: 0; }
+
+@media screen {
+  body {
+    background-color: #dddddd; }
+  .container {
+    background-color: #ffffff;
+    margin: 3rem auto; } }
+
+@media print {
+  html, body {
+    font-size: 125%;
+    margin: 0;
+    padding: 0; }
+  .container {
+    width: 100%; }
+  .mugshot {
+    margin: 0.5rem 0 0 3rem;
+    height: 200px;
+    width: 200px; }
+  .jumbo h1 {
+    font-size: 3rem; }
+  .jumbo h2 {
+    font-size: 1.7rem; }
+  .jumbo p {
+    font-size: 1rem; }
+  ul.contact {
+    margin-left: 20%; }
+  main {
+    margin-top: 0;
+    padding: 0 2.5rem; }
+  article h1 {
+    font-size: 2.2rem; }
+  article h2 {
+    font-size: 1.7rem;
+    font-weight: 400; }
+  article h3 {
+    font-size: 1.3rem; }
+  article ul.bubbles li {
+    font-size: 1.5rem; }
+  article .tasks {
+    font-size: 1.3rem; }
+  .page-break {
+    display: block;
+    margin-top: 5rem;
+    page-break-before: always; } }
