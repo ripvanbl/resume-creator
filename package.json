@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "node-sass --include-path scss scss/index.scss css/index.css",
-    "watch": "concurrently \"lite-server\" \"npm run build -- -w\""
+    "start": "concurrently \"lite-server\" \"npm run build -- -w\""
   },
   "keywords": [
     "resume"

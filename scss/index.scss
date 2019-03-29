@@ -1,14 +1,21 @@
-$primary-color: #469099;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,700');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,700');
+
+$primary-color: #364c78;
 $medium-color: #dddddd;
+$dark-color: #555555;
+$light-color: #ffffff;
 $dark-font-color: #555555; 
 $light-font-color: #ffffff;
+$primary-font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+$print-font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
 
 html, body {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: $primary-font-family;
 }
 
 .container {
-  background-color: $alt-font-color;
+  background-color: $medium-color;
   padding: 2rem 0;
   width: 8.5in;
 
@@ -31,7 +38,7 @@ html, body {
 }
 
 .jumbo {
-  color: $alt-font-color;
+  color: $light-font-color;
   background-color: $primary-color;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -45,12 +52,12 @@ html, body {
 
   h2 {
     font-size: 1rem;
-    letter-spacing: 1px;
+    font-weight: 300;
     margin: 0;
   }
 
   hr {
-    border-top: 1px solid $alt-font-color;
+    border-top: 1px solid $light-font-color;
     width: 40%;
     margin-right:75%;
   }
@@ -59,6 +66,18 @@ html, body {
     font-size: 0.8rem;
     margin-bottom: 0.5rem;
   }
+}
+
+.page-break {
+  display: block;
+  margin-top: 2rem;
+  page-break-before: always;
+}
+
+.page-num {
+  color: $dark-font-color;
+  margin-top: 1rem;
+  text-align: right;
 }
 
 ul.contact {
@@ -117,6 +136,10 @@ article {
     font-weight: 400;
   }
 
+  ul {
+    list-style-type: square;
+  }
+
   ul.bubbles {
     list-style-type: none;
     display: flex;
@@ -127,7 +150,7 @@ article {
     li {
       background-color: $primary-color;
       border-radius: 4px;
-      color: $alt-font-color;
+      color: $light-font-color;
       font-size: small;
       padding: 0.1rem 1rem;
       margin: 0 0.7rem 0.7rem 0;
@@ -153,19 +176,30 @@ article {
   }
 
   .container {
-    background-color: $alt-font-color;
+    background-color: $light-color;
     margin: 3rem auto;
+  }
+
+  .page-break {
+    margin-top: 0;
+  }
+
+  .page-num {
+    display: none;
   }
 }
 
 @media print {
   html,body {
+    font-family: $print-font-family;
+    background-color: $light-color;
     font-size:125%;
     margin: 0;
     padding: 0;
   }
 
   .container {
+    background-color: $light-color;
     width: 100%;
   }
 
@@ -221,11 +255,5 @@ article {
     .tasks {
       font-size: 1.3rem;
     }
-  }
-
-  .page-break {
-    display: block;
-    margin-top: 5rem;
-    page-break-before: always;
   }
 }
